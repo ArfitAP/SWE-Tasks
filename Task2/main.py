@@ -11,6 +11,7 @@ app = Flask(__name__)
 def hello_world():
 
     try:
+        # Read data from request body
         json_data = request.get_json(force=True)
 
         productListings = json_data["productListings"]
